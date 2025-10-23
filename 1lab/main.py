@@ -11,22 +11,21 @@ if __name__ == "__main__":
         matrix = [[random.randint(1, 100) for _ in range(m)] for _ in range(n)]
 
         print("\nМатрица:")
-        for row in matrix:
-            print(row)
+        for stroka in matrix:
+            print(stroka)
 
         print("\nЗначения:")
 
-        max_by_rows = [max(row) for row in matrix]
-        print("Максимумы по строкам:", max_by_rows)
+        max_po_str = [max(stroka) for stroka in matrix]
+        print("Максимумы по строкам:", max_po_str)
 
-        max_in_cols = [max(matrix[i][j] for i in range(n)) for j in range(m)]
-        print("Максимумы по столбцам:", max_in_cols)
-
-        row_sums = [sum(row) for row in matrix]
-        max_sum_row_index = row_sums.index(max(row_sums))
-        print("Суммы по строкам:", row_sums)
-        print("Строка с наибольшей суммой:", max_sum_row_index + 1)
+        max_in_stolb = [max(matrix[i][j] for i in range(n)) for j in range(m)]
+        print("Максимумы по столбцам:", max_in_stolb)
 
         d1_sum = sum([matrix[i][i] for i in range(n)])
         d2_sum = sum([matrix[i][n-i-1] for i in range(n)])
-        print(d1_sum, d2_sum)
+        print("Сумма по диагоналям:", d1_sum, d2_sum)
+
+        str_sums = [sum(stroka) for stroka in matrix]
+        max_sum_str_index = str_sums.index(max(str_sums))
+        print("Строка с наибольшей суммой:", max_sum_str_index + 1)
