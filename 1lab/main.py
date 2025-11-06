@@ -1,7 +1,5 @@
-
-
+import random
 if __name__ == "__main__":
-    import random
     n = int(input("Введите количество строк (N): "))
     m = int(input("Введите количество столбцов (M): "))
 
